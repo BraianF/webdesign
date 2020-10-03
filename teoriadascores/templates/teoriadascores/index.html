@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria das cores</title>
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static 'teoriadascores/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'teoriadascores/fa/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'teoriadascores/css/styles.css' %}">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse  justify-content-md-center" id="navbarCollapse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'teoriadascores.index' %}">Teoria das cores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'flatdesign.index' %}">Flat design</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <button class="btn btn-primary rounded float-right" type="button" data-toggle="collapse" data-target="#cor" aria-expanded="true" aria-controls="collapseExample">
+                Esconder/Mostrar
+            </button>
+            <div  class="collapse show" id="cor">
+                <h1>Cor</h1>
+                <div class="row my-3">
+                    <div class="col-8">
+                        <p class="lead">
+                            A cor é a percepção visual que temos ao receber feixes de luz nos olhos.
+                        </p>
+                        <p class="lead">
+                            A cor dos objetos é determinada pela frequência de onda luminosa que eles refletem.
+                        </p>
+                        <p class="lead">
+                            O olho humano consegue enxergar as cores na frequência do vermelho (~405-480 THz) até a frequência do violeta (~680-790 THz). 
+                            Essas frequências estão nos limites do “espectro visível”. 
+                            As cores dentro do espectro visível são variações de vermelho, laranja, amarelo, verde, ciano, azul e violeta.
+                        </p>  
+                    </div>
+                    <div class="col-4">
+                        <figure class="figure">
+                            <img class="figure-img img-fluid " alt="Uma foto com morangos bem vermelhos" src="{% static 'teoriadascores/img/morango.png' %}" alt="">
+                            <figcaption class="figure-caption text-center">O morango é vermelho porque ele absorve todas as outras frequências de cor e reflete o vermelho.</figcaption>
+                        </figure>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            
+                <h1>Teoria das cores aplicada ao desenvolvimento web</h1>
+                <div class="row my-3">
+                    <div class="col-8">
+                        <p class="lead">
+                            A Teoria das cores cobre uma diversas coisas, mas de forma super resumida se trata da interação das cores em um design 
+                            por meio de complementação, contraste e vibração. (Pronto, fim do tema. Próximo!)
+                        </p>
+                        <p class="lead">
+                            Em websites, a interação das cores pode auxiliar a definir uma identidade, tendo como exemplos rápidos Netflix, 
+                            Facebook e Mercado Livre que podem ser rapidamente identificados através do design e suas cores. 
+                            Há estudos que destacam que cores diferentes podem induzir emoções nas pessoas, incentivando a realizar o objetivo 
+                            do site (como um site de vendas) ou trazendo mais conforto ao consumir o conteúdo. 
+                            No 
+                            <a href="https://neilpatel.com/blog/psychology-of-color-and-conversions/" target="_blank" rel="noopener noreferrer">site de Neil Patel </a>
+                            há exemplos de como simples alterações em componentes podem ser o motivo de ganhos em vendas.
+                        </p>
+                        <p class="lead">
+                            Tendo posto os conceitos básicos, vamos para as definições dos três elementos básicos da teoria das cores: 
+                            complementação, contraste e vibração.
+                        </p>
+                    </div>
+                </div>
+            
+        </div>
+        
+        <div class="jumbotron">
+            <h3 class="my-3">Complementalção</h3>
+            <div class="row my-3">
+                <div class="col-8">
+                    <p class="lead">
+                        Complementação é a maneira de como vemos as cores em relação com outras cores. 
+                        Quando as cores ocupam extremidades opostas do espectro de cores, elas levam as pessoas a considerarem um design visualmente 
+                        atraente ao estabelecer um meio agradável aos olhos. 
+                        Em vez de se esforçar para acomodar uma área específica do espectro de cores, o olho recebe um equilíbrio. 
+                        Existem diversos comuns de complementação. Eles serão abordados abaixo.
+                    </p>
+                </div>
+                <div class="col-3">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid " alt="Círculo cormático" src="{% static 'teoriadascores/img/circulo-cromatico.png' %}" alt="">
+                        <figcaption class="figure-caption text-center">O círculo cromático é uma ferramenta indispensável para quem trabalha com elementos visuais.</figcaption>
+                    </figure>
+                </div>    
+            </div>
+        </div>
+
+        <div class="jumbotron">    
+            <h3 class="my-3">Contraste</h3>
+            <div class="row my-3">
+                <div class="col-8">
+                    <p class="lead">
+                        O contraste reduz o cansaço visual e concentra a atenção do usuário, dividindo e definindo claramente os elementos em uma página. 
+                        O exemplo mais aparente de contraste é uma seleção eficaz de fundo e cor do texto, conforme mostrado abaixo:
+                    </p>
+                    <p class="text-center" style="background-color: white;">
+                        <b>
+                            Ao escolher cores totalmente complementares, o texto torna-se facilmente legível.
+                        </b>
+                    </p>
+                    <p class="text-center" style="background-color: black; color: white;">
+                        Às vezes, a escolha de um esquema de cores em que o texto seja o elemento mais brilhante reduz o cansaço visual, focando a atenção do usuário.
+                    </p>
+                    <p class="text-center" style="background-color: #ffff00; color: #ff9900;">
+                        A falta de contraste entre o texto e o background é terrível! Os olhos não saberão onde focar, temos que "forçar a vista" para enxergar o que está escrito.
+                    </p>
+                    <p class="text-center" style="background-color: #ff00ff; color: #ffff00;">
+                        Um esquema de cores complementar não significa necessariamente que o contraste entre o texto e o fundo seja forte o suficiente. Às vezes, uma de suas cores fica muito brilhante em comparação com a outra, o que pode causar fadiga ocular.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <h3 class="my-3">Vibração</h3>
+            <div class="row my-3">
+                <div class="col-8">
+                    <p class="lead">
+                        A vibração refere-se à emoção do seu design. 
+                        Cores mais vivas levam o usuário a se sentir mais enérgico como resultado de seu design, 
+                        o que é particularmente eficaz quando você está tentando anunciar um produto ou invocar uma resposta emocional. 
+                        Tons mais escuros relaxam o usuário, permitindo que sua mente se concentre em outras coisas. 
+                        A seguir segue um infográfico apresentado pelo site 
+                        <a href="https://thelogocompany.net/blog/infographics/psychology-color-logo-design/" target="_blank" rel="noopener noreferrer">The Logo Company</a> 
+                        apresentando as emoções:
+                    </p>
+                </div>
+            </div>
+            <div class="row my-3">
+                <figure class="figure">
+                    <img class="figure-img img-fluid " alt="Infografico de emoção das cores" src="{% static 'teoriadascores/img/emocao-cores.png' %}" alt="">
+                    <figcaption class="figure-caption text-center">Cada faixa de cor apresenta a relação com determinada emoção</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <h1 class="my-3">Esquemas de cores</h1>
+            <div class="row my-3">
+                <div class="col-8">
+                    <p class="lead">
+                        <u>Como organizar as cores para que exista uma harmonia entre elas?</u> 
+                        <u>Como deixar o conjunto de cores utilizadas visualmente agradável?</u>
+                    </p>
+                    <p class="lead">
+                        Essas dúvidas são respondidas com os esquemas de cores. 
+                        Um esquema de cores é a combinação de cores baseando-se na sua localização do círculo cromático. 
+                        Dentre os diversos esquemas existentes, citarei os seguintes:
+                    </p>
+                </div>
+            </div>
+        
+            <hr>
+
+            <h3 class="my-3">Complementares</h3>
+            <div class="row my-3">
+                <div class="col-8">
+                    <p class="lead">
+                        Este esquema usa duas cores que estão posicionadas exatamente opostas uma da outra na roda de cores, 
+                        como vermelho e verde ou também amarelo e roxo. 
+                    </p>
+                    <p class="lead">
+                        Usar duas cores contrastantes juntas faz elas se destacarem mais, ficando mais vivas em seu design. 
+                    </p>
+                    <p class="lead">
+                        Como é um esquema de alto contraste, é recomendado adicionar uma cor neutra à dupla de cores complementares escolhidas. 
+                        Cores neutras são aquelas que não estão na roda de cores básica, como o bege, as tonalidades de marrom claro, 
+                        cinza claro, preto e branco.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Círculo cromático apontando duas cores complementares" src="{% static 'teoriadascores/img/cores-complementares.png' %}" alt="">
+                        <figcaption class="figure-caption text-center">Laranja-vermelho e ciano são cores complementares</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="my-3">Análogas</h3>
+            <div class="row my-3">
+                <div class="col-4">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Exemplos de cores análogas" src="{% static 'teoriadascores/img/cores-analogas.jpg' %}" alt="">
+                        <figcaption class="figure-caption text-center">Exemplos de cores análogas</figcaption>
+                    </figure>
+                </div>
+                <div class="col-8">
+                    <p class="lead">
+                        Neste esquema, são utilizadas três cores que ficam adjacentes uma à outra no círculo de cores, como laranja, amarelo-laranja e amarelo. 
+                    </p>
+                    <p class="lead">
+                        Quaisquer três cores que estejam uma do lado da outra na roda se harmonizam muito bem devido à sua proximidade e sua vibração.
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h3 class="my-3">Tríades</h3>
+            <div class="row my-3">
+                <div class="col-8">
+                    <p class="lead">
+                        O esquema tríade usa três cores que fiquem equidistantes uma da outra na roda, formando um triângulo equilátero.
+                    </p>
+                    <p class="lead">
+                        É recomendado que esse esquema seja utilizado tendo uma cor dominante e as outras sendo cores de suporte.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded" alt="Círculo cromático apontando esquema tríade" src="{% static 'teoriadascores/img/cores-triades.jpg' %}" alt="">
+                        <figcaption class="figure-caption text-center">Faça um triângulo equilátero que terá um esquema de cores tríade</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="{% static 'teoriadascores/js/jquery.min.js' %}"></script>
+    <script src="{% static 'teoriadascores/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

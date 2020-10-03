@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flat design</title>
+    {% load static %}
+    
+    <link rel="stylesheet" href="{% static 'flatdesign/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'flatdesign/css/flat-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'flatdesign/css/theme.css' %}">
+    
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-embossed navbar-expand-lg fixed-top" role="navigation">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-01"></button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbar-collapse-01">
+              <ul class="nav navbar-nav">
+                <li><a href="{% url 'teoriadascores.index' %}">Teoria das cores</a></li>
+                <li><a href="{% url 'flatdesign.index' %}">Flat design</a></li>
+               </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav>
+        <div class="demo-headline">
+            <h1 class="demo-logo">
+            
+            Flat Design
+            <small>Baseado no tema de bootstrap <a href="https://designmodo.github.io/Flat-UI/" target="_blank">Flat UI</a></small>
+            </h1>
+        </div>
+
+        <div class="row">
+            <p class="lead">
+                <b >Flat design</b> é um gênero minimalista de design de Interface de Usuário que é usado atualmente em interfaces gráficas para aplicativos e sites. 
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    O estilo visa criar uma imagem 2D (ou plana, por isso o nome “flat”), 
+                    não usando nenhum elemento estilístico adicional, como sombras ou gradientes. 
+                    Uma interface de usuário de design plano parece simplificada, eficiente e fácil de ler.
+                </p>
+            </div>
+            <div class="col-4">
+                <figure class="figure">
+                    <img class="figure-img img-responsive rounded" alt="Terra plana" src="{% static 'flatdesign/images/terra-plana.jpg' %}" alt="">
+                    <figcaption class="figure-caption text-center">Sem essa coisa de efeito 3D. Aqui a regra é <i><b>plana</b></i>!</figcaption>
+                    <figcaption class="figure-caption text-center">Que trocadilho terrível...</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <figure class="figure">
+                    <img class="figure-img img-responsive rounded" alt="Terra plana" src="{% static 'flatdesign/images/esqueumorfismo.jpg' %}" alt="">
+                    <figcaption class="figure-caption text-center">O simples é a melhor escolha</figcaption>
+                </figure>
+            </div>
+            <div class="col-8">
+                <p>
+                    O flat design é oposto ao esqueumorfismo, 
+                    cujo método visa tentar mostrar representações próximas à realidade nos elementos visuais. 
+                    Esse gênero de design opta por identificar seus aplicativos e objetos através de representações simples.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-8">
+                <p>
+                    Além de atualmente estar em alta, o flat design se destaca pelas suas principais características:
+                </p>
+            </div>
+        </div>
+        <div class="row my-1">
+            <div class="palette palette-emerald">
+                <dt><h3>Simplicidade</h3></dt>
+                <div class="col-8">
+                    <dd>
+                        <p>
+                            Seu foco é no desenvolvimento de layouts efetivos e interfaces limpas, evitando o uso de 3D, 
+                            sombras e animações excessivas. 
+                            Vale ressaltar que um design simples não representa uma criação simples, muito menos fácil.
+                        </p>
+                    </dd>
+                </div>
+            </div>
+        </div>
+        <div class="row my-1">
+            <dr class="palette palette-alizarin">
+                <dt><h3>Minimalista</h3></dt>
+                <div class="col-8">
+                    <dd>
+                        <p>
+                            Segundo o conceito de “menos é mais” o fator minimalista é utilizado para evitar confusão e desorganização no layout. 
+                            O foco principal é na apresentação do conteúdo.
+                        </p>
+                    </dd>
+                </div>
+            </dr>
+        </div>
+        <div class="row my-1">
+            <dr class="palette palette-wet-asphalt">
+                <dt><h3>Cores</h3></dt>
+                <div class="col-8">
+                    <dd>
+                        <p>
+                            Quando se utilizam elementos simples para definir a estrutura do layout, 
+                            a utilização de cores se torna fundamental para tornar o design vibrante e apelativo. 
+                            As cores provocam emoções, e a teoria das cores deve ser considerada pelo designer.
+                        </p>
+                    </dd>
+                </div>
+            </dr>
+        </div>
+        <div class="row my-1">
+            <dr class="palette palette-sun-flower">
+                <dt><h3>Tipografia</h3></dt>
+                <div class="col-8">
+                    <dd>
+                        <p>
+                            Sem a utilização de textura, efeitos 3D, sombras e gradientes, a tipografia se torna de grande importância no flat design. 
+                            A escolha da fonte é fundamental para trabalhar a mensagem do layout.
+                        </p>
+                    </dd>
+                </div>
+            </dr>
+        </div>
+        <div class="row my-1">
+            <dr class="palette palette-peter-river">
+                <dt><h3>Design limpo</h3></dt>
+                <div class="col-8">
+                    <dd>
+                        <p>
+                            O design é limpo e vai direto ao ponto, exibindo detalhes e informações precisas. 
+                            São os elementos exibidos da forma mais real, sem competições com sombras, efeitos, gradientes e afins.
+                        </p>
+                    </dd>
+                </div>
+            </dr>
+        </div>
+        <div class="row my-1">
+            <dr class="palette palette-amethyst">
+                <dt><h3>Agilidade</h3></dt>
+                <div class="col-8">
+                    <dd>
+                        <p>
+                            O flat design é rápido para obter a atenção do usuário e levá-lo até o destino especificado pelo site. O foco são nos elementos essenciais, instruções claras e diretas. 
+                            O flat design é objetivo e faz o trabalho de uma forma eficiente.
+                        </p>
+                    </dd>
+                </div>
+            </dr>
+        </div>
+    </div>
+    <script src="{% static 'flatdesign/js/jquery.min.js' %}"></script>
+    <script src="{% static 'flatdesign/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'flatdesign/js/flat-ui.js' %}"></script>
+</body>
+</html>
+
